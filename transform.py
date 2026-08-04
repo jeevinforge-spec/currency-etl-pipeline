@@ -16,9 +16,9 @@ def transform_rates(raw_data):
     df = pd.DataFrame(rows)
     return df
 
-input_curr = str(input("Enter the Base Currency : ")).upper()
 
 if __name__ == "__main__":
+    input_curr = str(input("Enter the Base Currency : ")).upper()
     raw = fetch_rates(input_curr)
     df = transform_rates(raw)
     print(df.head(10))
